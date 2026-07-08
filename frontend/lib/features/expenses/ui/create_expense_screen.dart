@@ -5,6 +5,7 @@ import 'package:file_picker/file_picker.dart';
 import '../../../core/theme.dart';
 import '../../../core/services/ocr_service.dart';
 import '../repositories/expense_repository.dart';
+import '../../../core/theme/spacing.dart';
 
 class CreateExpenseScreen extends StatefulWidget {
   const CreateExpenseScreen({super.key});
@@ -111,7 +112,7 @@ class _CreateExpenseScreenState extends State<CreateExpenseScreen> {
     return Scaffold(
       appBar: AppBar(title: const Text('Add Expense')),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(AppSpacing.xl),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

@@ -9,6 +9,7 @@ import '../../reports/ui/reports_screen.dart';
 import '../../taxes/ui/taxes_screen.dart';
 import '../../expenses/ui/expenses_screen.dart';
 import 'cash_flow_chart.dart';
+import '../../../core/theme/spacing.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -119,7 +120,7 @@ class DashboardOverview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
-      padding: const EdgeInsets.all(24.0),
+      padding: const EdgeInsets.all(AppSpacing.xl),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -150,19 +151,8 @@ class DashboardOverview extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           Expanded(
-            child: Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.05),
-                    blurRadius: 10,
-                  )
-                ],
-              ),
-              child: const CashFlowChartWidget(),
+            child: Card(
+                child: const CashFlowChartWidget(),
             ),
           )
         ],
@@ -173,7 +163,7 @@ class DashboardOverview extends StatelessWidget {
   Widget _buildSummaryCard(BuildContext context, String title, String amount, IconData icon, Color color) {
     return Expanded(
       child: Container(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(AppSpacing.xl),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(12),

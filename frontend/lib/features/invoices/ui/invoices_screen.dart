@@ -5,6 +5,7 @@ import '../../../core/services/paynow_service.dart';
 import '../models/invoice.dart';
 import '../repositories/invoice_repository.dart';
 import 'create_invoice_screen.dart';
+import '../../../core/theme/spacing.dart';
 
 class InvoicesScreen extends StatefulWidget {
   const InvoicesScreen({super.key});
@@ -79,7 +80,7 @@ class _InvoicesScreenState extends State<InvoicesScreen> {
   Widget build(BuildContext context) {
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
-      padding: const EdgeInsets.all(24.0),
+      padding: const EdgeInsets.all(AppSpacing.xl),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -119,18 +120,7 @@ class _InvoicesScreenState extends State<InvoicesScreen> {
             Center(child: Text('Error: $_error', style: const TextStyle(color: Colors.red)))
           else
             Expanded(
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.05),
-                      blurRadius: 10,
-                    )
-                  ],
-                ),
+              child: Card(
                 child: SingleChildScrollView(
                   child: DataTable(
                     columns: const [

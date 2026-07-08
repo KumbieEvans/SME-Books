@@ -4,6 +4,7 @@ import '../../../core/theme.dart';
 import '../models/journal_entry.dart';
 import '../repositories/ledger_repository.dart';
 import 'create_journal_entry_screen.dart';
+import '../../../core/theme/spacing.dart';
 
 class LedgerScreen extends StatefulWidget {
   const LedgerScreen({super.key});
@@ -71,7 +72,7 @@ class _LedgerScreenState extends State<LedgerScreen> {
   Widget build(BuildContext context) {
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
-      padding: const EdgeInsets.all(24.0),
+      padding: const EdgeInsets.all(AppSpacing.xl),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -107,18 +108,7 @@ class _LedgerScreenState extends State<LedgerScreen> {
             Center(child: Text('Error: $_error', style: const TextStyle(color: Colors.red)))
           else
             Expanded(
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.05),
-                      blurRadius: 10,
-                    )
-                  ],
-                ),
+              child: Card(
                 child: Column(
                   children: [
                     Expanded(
@@ -154,7 +144,7 @@ class _LedgerScreenState extends State<LedgerScreen> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(AppSpacing.lg),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [

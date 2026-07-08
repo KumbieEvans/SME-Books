@@ -5,6 +5,7 @@ import '../../../core/theme.dart';
 import '../repositories/invoice_repository.dart';
 import '../../taxes/repositories/tax_repository.dart';
 import '../../taxes/models/tax.dart';
+import '../../../core/theme/spacing.dart';
 
 class CreateInvoiceScreen extends StatefulWidget {
   const CreateInvoiceScreen({super.key});
@@ -147,7 +148,7 @@ class _CreateInvoiceScreenState extends State<CreateInvoiceScreen> {
     return Scaffold(
       appBar: AppBar(title: const Text('Create Invoice')),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(AppSpacing.xl),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

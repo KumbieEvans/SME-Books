@@ -4,6 +4,7 @@ import 'package:decimal/decimal.dart';
 import '../../../core/theme.dart';
 import '../models/tax.dart';
 import '../repositories/tax_repository.dart';
+import '../../../core/theme/spacing.dart';
 
 class TaxesScreen extends StatefulWidget {
   const TaxesScreen({super.key});
@@ -111,7 +112,7 @@ class _TaxesScreenState extends State<TaxesScreen> {
     }
 
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(24.0),
+      padding: const EdgeInsets.all(AppSpacing.xl),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

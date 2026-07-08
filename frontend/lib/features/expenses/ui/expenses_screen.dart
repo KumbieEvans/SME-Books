@@ -4,6 +4,7 @@ import '../../../core/theme.dart';
 import '../models/expense.dart';
 import '../repositories/expense_repository.dart';
 import 'create_expense_screen.dart';
+import '../../../core/theme/spacing.dart';
 
 class ExpensesScreen extends StatefulWidget {
   const ExpensesScreen({super.key});
@@ -68,7 +69,7 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
   Widget build(BuildContext context) {
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
-      padding: const EdgeInsets.all(24.0),
+      padding: const EdgeInsets.all(AppSpacing.xl),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -106,18 +107,7 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
             const Expanded(child: Center(child: Text('No expenses recorded yet.')))
           else
             Expanded(
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.05),
-                      blurRadius: 10,
-                    )
-                  ],
-                ),
+              child: Card(
                 child: SingleChildScrollView(
                   child: DataTable(
                     columns: const [

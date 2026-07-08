@@ -3,6 +3,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../../../core/theme.dart';
 import '../repositories/dashboard_repository.dart';
+import '../../../core/theme/spacing.dart';
 
 class CashFlowChartWidget extends StatefulWidget {
   const CashFlowChartWidget({super.key});
@@ -76,7 +77,7 @@ class _CashFlowChartWidgetState extends State<CashFlowChartWidget> {
     }
 
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(AppSpacing.lg),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [

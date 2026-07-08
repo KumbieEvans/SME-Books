@@ -4,6 +4,7 @@ import 'package:decimal/decimal.dart';
 import '../../../core/theme.dart';
 import '../models/account.dart';
 import '../repositories/ledger_repository.dart';
+import '../../../core/theme/spacing.dart';
 
 class CreateJournalEntryScreen extends StatefulWidget {
   const CreateJournalEntryScreen({super.key});
@@ -139,7 +140,7 @@ class _CreateJournalEntryScreenState extends State<CreateJournalEntryScreen> {
           : Form(
               key: _formKey,
               child: SingleChildScrollView(
-                padding: const EdgeInsets.all(24.0),
+                padding: const EdgeInsets.all(AppSpacing.xl),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
