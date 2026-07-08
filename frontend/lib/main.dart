@@ -7,8 +7,8 @@ import 'features/auth/ui/login_screen.dart';
 import 'features/dashboard/ui/dashboard_screen.dart';
 
 // TODO: Replace with local Supabase URL and Anon Key when running
-const supabaseUrl = 'http://127.0.0.1:54321';
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRlZmF1bHQiLCJyb2xlIjoiYW5vbiIsImlhdCI6MTY5MzE2MTEwMywiZXhwIjoxOTk3ODAxMTAzfQ.xxxxxxxxxxxx';
+const supabaseUrl = 'https://nrtoqpoycbcniniemwhu.supabase.co';
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5ydG9xcG95Y2JjbmluaWVtd2h1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM1MTY2NDksImV4cCI6MjA5OTA5MjY0OX0.wBWLxWAtN-5BPVsXdqoX5rD6pDJMJiNiKz0Mg--AvUM';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
